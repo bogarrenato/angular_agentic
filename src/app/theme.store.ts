@@ -41,14 +41,39 @@ export const ThemeStore = signalStore(
       this.setTheme(next);
     },
   })),
-  withHooks((store) => ({
-    onInit() {
-      effect(() => {
+  withHooks((store) => {
+    const togglePrimeNGTheme = (mode: ThemeMode) => {
+      // Wait for DOM to be ready
+      setTimeout(() => {
+        const light = document.getElementById('theme-light') as HTMLLinkElement | null;
+        const dark = document.getElementById('theme-dark') as HTMLLinkElement | null;
+        if (light && dark) {
+          if (mode === 'dark') {
+            light.disabled = true;
+            dark.disabled = false;
+          } else {
+            light.disabled = false;
+            dark.disabled = true;
+          }
+        }
+      }, 0);
+    };
+
+    return {
+      onInit() {
+        // Initialize theme immediately
         const mode = store.theme();
         document.documentElement.setAttribute('data-theme', mode);
-      });
-    },
-  })),
+        togglePrimeNGTheme(mode);
+        
+        effect(() => {
+          const mode = store.theme();
+          document.documentElement.setAttribute('data-theme', mode);
+          togglePrimeNGTheme(mode);
+        });
+      }
+    };
+  }),
 );
 
 

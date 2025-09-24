@@ -1,15 +1,17 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 import { ThemeStore } from './theme.store';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToolbarModule, ButtonModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'my-app';
+  protected title = 'Agentic AI Demo';
   private readonly themeStore = inject(ThemeStore);
 
   protected themeLabel = computed(() =>
@@ -17,7 +19,9 @@ export class App {
   );
 
   protected themeAnnounce = computed(() =>
-    this.themeStore.theme() === 'dark' ? 'Dark theme enabled' : 'Light theme enabled'
+    this.themeStore.theme() === 'dark'
+      ? 'Dark theme enabled'
+      : 'Light theme enabled'
   );
 
   protected onToggleTheme(): void {

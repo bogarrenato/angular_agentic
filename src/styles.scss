@@ -1,3 +1,20 @@
+/* PrimeNG base styles - loaded via CDN in index.html */
+
+/* Fallback styles to ensure visibility on first load */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Grok-inspired dark theme fallback */
+[data-theme="dark"] body {
+  background-color: #171717;
+  color: #ffffff;
+}
+
 /* Global Design Tokens and Theme Setup */
 
 :root {
@@ -78,11 +95,477 @@ html, body {
 body {
   background: var(--surface);
   color: var(--text-1);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+}
+
+/* Typography improvements - Cupertino Style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; }
+h2 { font-size: 2rem; font-weight: 600; letter-spacing: -0.025em; }
+h3 { font-size: 1.75rem; font-weight: 600; letter-spacing: -0.02em; }
+h4 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.015em; }
+h5 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
+h6 { font-size: 1rem; font-weight: 600; letter-spacing: -0.005em; }
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+/* Button typography - Cupertino Style */
+button, .p-button {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 0.875rem;
+}
+
+/* Input typography - Cupertino Style */
+input, textarea, select, .p-inputtext, .p-textarea, .p-dropdown {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Chip typography - Cupertino Style */
+.p-chip {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: -0.005em;
+}
+
+/* Modern typography scale */
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+/* Font weights - Cupertino Style */
+.font-thin { font-weight: 100; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* Cupertino-specific typography */
+.cupertino-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+.cupertino-display {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.cupertino-caption {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+.cupertino-button {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+/* Letter spacing - Cupertino Style */
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-normal { letter-spacing: 0em; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+/* Cupertino-specific letter spacing */
+.tracking-cupertino-tight { letter-spacing: -0.02em; }
+.tracking-cupertino-normal { letter-spacing: -0.01em; }
+.tracking-cupertino-wide { letter-spacing: 0em; }
+
+/* Line heights */
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.25; }
+.leading-snug { line-height: 1.375; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.625; }
+.leading-loose { line-height: 2; }
+
+/* Layout helpers */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1 1 auto;
+}
+
+/* Dark mode overrides - Grok-inspired colors */
+[data-theme="dark"] {
+  --surface-ground: #171717; /* Grok: Very dark gray, almost black */
+  --surface-card: #202020;   /* Grok: Slightly lighter dark gray for panels/cards */
+  --surface-border: #333333; /* Grok: Darker gray for borders */
+  --text-color: #ffffff;     /* Grok: White */
+  --text-color-secondary: #b3b3b3; /* Grok: Light gray */
+  --surface-hover: #2D2D2D;  /* Grok: Medium dark gray for hover/selected states, input background */
+  --primary-color: #007AFF;  /* Grok: Vibrant blue accent */
+  --primary-color-text: #ffffff; /* Text on primary color should be white for this blue */
+}
+
+/* Ensure proper contrast in dark mode */
+[data-theme="dark"] .agents-container {
+  background: var(--surface-ground);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .panel-left,
+[data-theme="dark"] .panel-middle,
+[data-theme="dark"] .panel-right {
+  background: var(--surface-card);
+  color: var(--text-color);
+  border-color: var(--surface-border);
+}
+
+[data-theme="dark"] .agent-card {
+  background: var(--surface-card);
+  color: var(--text-color);
+  border-color: var(--surface-border);
+}
+
+[data-theme="dark"] .agent-card:hover {
+  background: var(--surface-hover);
+}
+
+[data-theme="dark"] .conversation-item:hover {
+  background: var(--surface-hover);
+}
+
+[data-theme="dark"] .conversation-item.selected {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+[data-theme="dark"] .message-content {
+  background: var(--surface-hover);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .message.user .message-content {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+[data-theme="dark"] .empty-state {
+  color: var(--text-color-secondary);
+}
+
+[data-theme="dark"] .resource-card {
+  background: var(--surface-card);
+  color: var(--text-color);
+  border-color: var(--surface-border);
+}
+
+[data-theme="dark"] .agent-card.slave {
+  background: var(--surface-hover);
+  border-left-color: var(--primary-color);
+}
+
+[data-theme="dark"] .agent-card.slave:hover {
+  background: var(--surface-border);
+}
+
+[data-theme="dark"] .slave-icon {
+  color: var(--text-color-secondary);
+}
+
+/* ========================================
+   GLOBAL ACCESSIBILITY (A11Y) FOCUS STYLES
+   ======================================== */
+
+/* Global focus styles for all interactive elements */
+*:focus {
+  outline: 2px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2) !important;
+}
+
+/* Remove default focus styles and apply custom ones */
+*:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Enhanced focus styles for better visibility */
+*:focus-visible {
+  outline: 3px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(0, 122, 255, 0.3) !important;
+  border-radius: 4px !important;
+}
+
+/* Button-specific focus styles */
+button:focus-visible,
+.p-button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px rgba(0, 122, 255, 0.4) !important;
+  transform: scale(1.02) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Input field focus styles */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.p-inputtext:focus-visible,
+.p-textarea:focus-visible,
+.p-dropdown:focus-visible {
+  outline: 3px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px rgba(0, 122, 255, 0.3) !important;
+  border-color: var(--primary-color, #007AFF) !important;
+}
+
+/* Link focus styles */
+a:focus-visible {
+  outline: 2px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2) !important;
+  text-decoration: underline !important;
+}
+
+/* Card and interactive container focus styles */
+.agent-card:focus-visible,
+.conversation-item:focus-visible,
+.settings-section:focus-visible {
+  outline: 3px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px rgba(0, 122, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* PrimeNG specific focus overrides */
+.p-button:focus-visible {
+  outline: 3px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px rgba(0, 122, 255, 0.4) !important;
+}
+
+.p-chip:focus-visible {
+  outline: 2px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3) !important;
+}
+
+.p-splitter:focus-visible {
+  outline: 2px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 1px !important;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color, #007AFF);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  *:focus-visible {
+    outline: 4px solid var(--primary-color, #007AFF) !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 0 8px rgba(0, 122, 255, 0.5) !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *:focus-visible {
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  button:focus-visible,
+  .p-button:focus-visible {
+    transform: none !important;
+  }
+}
+
+/* Dark mode focus color adjustments */
+[data-theme="dark"] *:focus-visible {
+  outline-color: #4A9EFF !important;
+  box-shadow: 0 0 0 6px rgba(74, 158, 255, 0.3) !important;
+}
+
+[data-theme="dark"] button:focus-visible,
+[data-theme="dark"] .p-button:focus-visible {
+  box-shadow: 0 0 0 5px rgba(74, 158, 255, 0.4) !important;
+}
+
+[data-theme="dark"] input:focus-visible,
+[data-theme="dark"] textarea:focus-visible,
+[data-theme="dark"] .p-inputtext:focus-visible,
+[data-theme="dark"] .p-textarea:focus-visible {
+  box-shadow: 0 0 0 5px rgba(74, 158, 255, 0.3) !important;
+  border-color: #4A9EFF !important;
+}
+
+/* Settings section keyboard navigation styles */
+.settings-section {
+  position: relative;
+}
+
+.settings-section:focus-within {
+  outline: 2px solid var(--primary-color, #007AFF);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.setting-chip:focus-visible,
+.p-chip:focus-visible {
+  outline: 2px solid var(--primary-color, #007AFF) !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3) !important;
+  transform: scale(1.05) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Enhanced focus for settings sections */
+.settings-section[role="group"]:focus-within {
+  background: rgba(0, 122, 255, 0.05);
+  border-radius: 8px;
+  padding: 4px;
+  margin: -4px;
+}
+
+/* Dark mode overrides for settings navigation */
+[data-theme="dark"] .settings-section:focus-within {
+  background: rgba(74, 158, 255, 0.1);
+}
+
+[data-theme="dark"] .setting-chip:focus-visible,
+[data-theme="dark"] .p-chip:focus-visible {
+  box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.4) !important;
+}
+
+/* Keyboard navigation hints */
+.settings-section[role="group"]::before {
+  content: "⌨️ Nyilakkal navigálj fel-le, Home/End az elejére/végére";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  font-size: 11px;
+  color: var(--text-color-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  background: var(--surface-card);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--surface-border);
+  z-index: 10;
+}
+
+.settings-section[role="group"]:focus-within::before {
+  opacity: 1;
+}
+
+/* Hide hint on mobile */
+@media (max-width: 768px) {
+  .settings-section[role="group"]::before {
+    display: none;
+  }
+}
+
+/* Quick actions toolbar keyboard navigation */
+.quick-actions[role="toolbar"] {
+  position: relative;
+}
+
+.quick-actions[role="toolbar"]:focus-within {
+  outline: 2px solid var(--primary-color, #007AFF);
+  outline-offset: 2px;
+  border-radius: 8px;
+  background: rgba(0, 122, 255, 0.05);
+  padding: 4px;
+  margin: -4px;
+}
+
+.quick-actions[role="toolbar"]::before {
+  content: "⌨️ Bal/Jobb nyilakkal navigálj, Home/End az elejére/végére";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  font-size: 11px;
+  color: var(--text-color-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  background: var(--surface-card);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--surface-border);
+  z-index: 10;
+}
+
+.quick-actions[role="toolbar"]:focus-within::before {
+  opacity: 1;
+}
+
+/* Dark mode overrides for quick actions */
+[data-theme="dark"] .quick-actions[role="toolbar"]:focus-within {
+  background: rgba(74, 158, 255, 0.1);
+}
+
+/* Hide hint on mobile */
+@media (max-width: 768px) {
+  .quick-actions[role="toolbar"]::before {
+    display: none;
+  }
 }
 
